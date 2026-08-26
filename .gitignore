@@ -1,0 +1,69 @@
+# The instructor solution. Never goes into the workshop repository.
+solution/
+
+# Node
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+pids
+*.pid
+*.seed
+*.pid.lock
+coverage
+*.lcov
+.nyc_output
+node_modules/
+jspm_packages/
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+*.tgz
+.yarn-integrity
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+.cache
+.parcel-cache
+
+# Angular
+dist/
+.angular/
+/out-tsc/
+.sass-cache/
+connect.lock
+testem.log
+typings/
+
+# .NET
+[Bb]in/
+[Oo]bj/
+artifacts/
+project.lock.json
+*.user
+*.suo
+*.userprefs
+*.nupkg
+msbuild.log
+msbuild.err
+msbuild.wrn
+[Tt]est[Rr]esult*/
+.vs/
+
+# The api writes its consultation log here when it runs outside a container.
+duck-api/data/
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store

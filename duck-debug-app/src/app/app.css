@@ -1,0 +1,50 @@
+.roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.answer blockquote {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  font-size: 1.15rem;
+  background: var(--card-picked);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+}
+
+.log {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.log li {
+  padding: 0.75rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.log .who {
+  font-weight: 600;
+}
+
+.log .when {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.log .problem {
+  margin: 0.4rem 0 0.2rem;
+}
+
+.log .tip {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}

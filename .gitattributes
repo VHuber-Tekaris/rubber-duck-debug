@@ -1,0 +1,12 @@
+# Everything that ends up inside a Linux container gets LF, whatever Windows
+# does locally. A CRLF Dockerfile with line continuations, or a CRLF shell
+# script, fails in confusing ways: "exec ./entrypoint.sh: no such file or
+# directory" or "$'\r': command not found".
+* text=auto eol=lf
+
+# PowerShell stays CRLF - it is only ever run on the host.
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+
+*.png binary
+*.ico binary

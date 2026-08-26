@@ -1,0 +1,9 @@
+<button
+  type="button"
+  class="duck"
+  [class.picked]="selected()"
+  (click)="pick.emit(duck())">
+  <span class="emoji">{{ duck().emoji }}</span>
+  <span class="name">{{ duck().name }}</span>
+  <span class="speciality">{{ duck().speciality }}</span>
+</button>

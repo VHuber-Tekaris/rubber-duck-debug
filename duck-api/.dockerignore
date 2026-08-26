@@ -1,0 +1,12 @@
+# Keep the build context small. Everything the build needs is the csproj, the
+# sources and duck-tips.json - nothing else has to be sent to the daemon.
+bin/
+obj/
+data/
+Dockerfile*
+compose*
+.dockerignore
+.git
+.gitignore
+.vs/
+*.user

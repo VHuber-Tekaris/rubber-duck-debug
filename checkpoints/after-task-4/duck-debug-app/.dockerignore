@@ -1,0 +1,13 @@
+# Keep the build context small. node_modules in particular is hundreds of
+# megabytes, and a Windows node_modules would break the build inside Linux
+# anyway - npm ci in the image installs the right binaries.
+node_modules
+dist
+.angular
+npm-debug.log
+Dockerfile*
+compose*
+.dockerignore
+.git
+.gitignore
+.vscode

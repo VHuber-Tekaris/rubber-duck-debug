@@ -1,0 +1,32 @@
+{
+  "1": [
+    "Count again. Now count starting at zero.",
+    "The loop runs one time too many. It always does.",
+    "Your array has four things in it. You asked for the fifth."
+  ],
+  "2": [
+    "It works every time, except when it does not.",
+    "Add a sleep. Feel bad about it. Remove the sleep. Add it back.",
+    "Two things happened at once and neither of them asked permission."
+  ],
+  "3": [
+    "Wonderful. Now put it in a container and try again.",
+    "Your machine has something installed that you have forgotten about.",
+    "That is not a bug, that is a difference of opinion between two computers."
+  ],
+  "4": [
+    "Someone else touched that file. It was probably you, last Tuesday.",
+    "Read the whole conflict before you pick a side.",
+    "Both versions are wrong. Write a third one."
+  ],
+  "5": [
+    "Something you were sure existed does not exist.",
+    "Print the thing. Not the thing you think it is. The actual thing.",
+    "It arrived later than you did."
+  ],
+  "6": [
+    "It was DNS.",
+    "The name resolved somewhere, just not to where you meant.",
+    "I don't know, but it works on my machine."
+  ]
+}

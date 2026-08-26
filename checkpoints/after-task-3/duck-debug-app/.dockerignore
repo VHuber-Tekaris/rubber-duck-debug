@@ -1,0 +1,11 @@
+# Keep the build context small. node_modules in particular is hundreds of megabytes
+node_modules
+dist
+.angular
+npm-debug.log
+Dockerfile*
+compose*
+.dockerignore
+.git
+.gitignore
+.vscode

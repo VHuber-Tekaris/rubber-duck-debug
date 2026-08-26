@@ -1,0 +1,70 @@
+<header>
+  <h1><span class="logo">&#129414;</span> Rubber Duck Debug</h1>
+  <p class="tagline">
+    Describe your bug to a duck. Receive a tip of questionable value.
+  </p>
+</header>
+
+@if (error()) {
+  <p class="banner">{{ error() }}</p>
+}
+
+<section>
+  <h2>1. Pick a duck</h2>
+  <div class="roster">
+    @for (duck of roster(); track duck.id) {
+      <app-duck-card
+        [duck]="duck"
+        [selected]="picked()?.id === duck.id"
+        (pick)="pick($event)" />
+    } @empty {
+      <p class="muted">No ducks on staff.</p>
+    }
+  </div>
+</section>
+
+<section>
+  <h2>2. Describe the problem</h2>
+  <textarea
+    rows="4"
+    [ngModel]="problem()"
+    (ngModelChange)="problem.set($event)"
+    [disabled]="!picked()"
+    placeholder="It works on my machine but not in the container..."></textarea>
+  <button type="button" class="ask" [disabled]="!picked() || !problem().trim() || busy()" (click)="ask()">
+    @if (picked()) {
+      Ask {{ picked()!.name }}
+    } @else {
+      Pick a duck first
+    }
+  </button>
+</section>
+
+@if (latest(); as answer) {
+  <section class="answer">
+    <h2>{{ answer.duckEmoji }} {{ answer.duckName }} says</h2>
+    <blockquote>{{ answer.tip }}</blockquote>
+  </section>
+}
+
+<section>
+  <h2>Consultation log</h2>
+  <p class="muted">
+    Every consultation is written to disk by the api. It should still be here after
+    the containers are recreated.
+  </p>
+  @if (log().length) {
+    <ol class="log">
+      @for (entry of log(); track entry.id) {
+        <li>
+          <span class="who">{{ entry.duckEmoji }} {{ entry.duckName }}</span>
+          <span class="when">{{ entry.askedAt | date: 'short' }}</span>
+          <p class="problem">{{ entry.problem }}</p>
+          <p class="tip">{{ entry.tip }}</p>
+        </li>
+      }
+    </ol>
+  } @else {
+    <p class="muted">Nothing yet.</p>
+  }
+</section>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>DuckPond</RootNamespace>
+    <!-- Keeps the app working on musl-based images without the full ICU set. -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <!--
+    duck-tips.json needs no explicit entry: the Web SDK picks up *.json in the
+    project folder as content and copies it next to the assembly on publish.
+  -->
+
+</Project>

@@ -1,0 +1,112 @@
+:root {
+  --bg: #0f1720;
+  --surface: #16212c;
+  --card: #1c2936;
+  --card-picked: #24384a;
+  --border: #2c3d4e;
+  --text: #e6edf3;
+  --muted: #93a4b3;
+  --accent: #f2c14e;
+  --danger: #e06c6c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+app-root {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h1 .logo {
+  font-size: 2.25rem;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+section > h2:first-child {
+  margin-top: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.banner {
+  padding: 0.75rem 1rem;
+  color: var(--danger);
+  background: #2a1a1a;
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font: inherit;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: vertical;
+}
+
+textarea:disabled {
+  opacity: 0.5;
+}
+
+button.ask {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: #1a1200;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.ask:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
